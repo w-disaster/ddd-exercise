@@ -7,10 +7,15 @@ import java.util.stream.Stream;
 
 public interface Table extends Iterable<Row> {
     Row getHeaders();
+
     Iterable<Row> getEntries();
+
     int getColumnsSize();
+
     int getRowsSize();
+
     Row getRow(int index);
+
     Stream<Row> stream();
 
     static Table withHeaders(Row headers, Iterable<Row> rows) {

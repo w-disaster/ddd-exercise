@@ -7,7 +7,9 @@ import java.util.List;
 
 public interface Row extends Iterable<String> {
     String get(int index);
+
     int size();
+
     List<String> items();
 
     static Row of(String... values) {
